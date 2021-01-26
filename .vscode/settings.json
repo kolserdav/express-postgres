@@ -1,0 +1,6 @@
+{
+    "eslint.validate": ["javascript"],
+    "files.associations": {
+        "**/*.template.ts": "plaintext"
+    }
+}

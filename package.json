@@ -1,0 +1,30 @@
+{
+  "name": "express-postgres",
+  "version": "0.0.1",
+  "description": "Opium middle server",
+  "main": "dist/index.js",
+  "repository": "https://github.com/kolserdav/express-postgres",
+  "author": "Sergey Kolmiller",
+  "license": "Comercial",
+  "private": true,
+  "scripts": {
+    "ts": "tsc -p . -w",
+    "ts:build": "tsc -p .",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/pg": "^7.14.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.11",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.18.0",
+    "typescript": "^4.1.3"
+  }
+}
