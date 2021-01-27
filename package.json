@@ -1,12 +1,12 @@
 {
   "name": "express-postgres",
   "version": "0.0.1",
-  "description": "Opium middle server",
+  "description": "Middle server",
   "main": "dist/index.js",
   "repository": "https://github.com/kolserdav/express-postgres",
   "author": "Sergey Kolmiller",
-  "license": "Comercial",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "ts": "tsc -p . -w",
     "ts:build": "tsc -p .",
