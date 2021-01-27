@@ -1,17 +1,20 @@
 import type * as T from '../../types';
 import * as orm from '../../orm';
+import * as tpa from '../../tpa';
 
 /**
  * Get schema object outside of RouteHandler!!!
  */
-const User = new orm.User();
+const User = new orm.User('GetUserById');
 
 const GetUserById: T.RouteHandler =  async (req, res) => {
    
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { query }: any = req;
   const { id }: T.Params.User.Get = query;
-  
+  const g = new tpa.Github();
+  const r = await g.GetUser('kolserdav');
+  console.log(r)
   const getRes = await User.GetUserById(parseInt(id, 10), 'Error get user by id');
   if (getRes.error) {
     const errorRes: T.ServerResponse<undefined> = {

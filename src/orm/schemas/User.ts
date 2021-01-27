@@ -1,10 +1,11 @@
 import Database from '../Database';
 import * as T from '../../types';
 
+
 export default class User extends Database {
   
-  constructor() {
-    super('User');
+  constructor(name: string) {
+    super(name);
   }
 
   public async GetUserById(id: number, errMessage: string): Promise<T.OrmResult<T.Orm.User[]>> {

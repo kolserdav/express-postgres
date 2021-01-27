@@ -20,8 +20,10 @@ const {
 export default abstract class Database {
   
   client: Client;
+  name: string;
 
   constructor(name: string) {
+    this.name = name;
     this.client = new Client({
       host: DATABASE_HOST,
       user: DATABASE_USER_LOGIN,
@@ -62,7 +64,7 @@ export default abstract class Database {
     return new Promise(resolve => {
       this.client.query(sql, params || [], (err, res) => {
         if (err) {
-          lib.Console.error(errMessage, err, new Error('Standart error from Query to database'));
+          lib.Console.error(errMessage, err, new Error(`Failed query for client: ${this.name}`));
           resolve({
             error: true,
             message: errMessage,

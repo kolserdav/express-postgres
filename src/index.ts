@@ -1,3 +1,6 @@
+/**
+ * Server endpoint file
+ */
 import dotenv from 'dotenv';
 dotenv.config();
 

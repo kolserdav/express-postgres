@@ -44,6 +44,5 @@ const Template: T.RouteHandler =  async (req, res) => {
   return res.status(200).json(successRes);
 }
 
-export default GetUserById;
 
 export default Template;

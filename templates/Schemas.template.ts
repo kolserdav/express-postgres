@@ -7,8 +7,8 @@ import * as T from '../../types';
 
 export default class Template extends Database<T.Orm.Some> {
   
-  constructor() {
-    super('User');
+  constructor(name: string) {
+    super(name);
   }
 
   public async GetUserById(id: number): Promise<T.OrmResult<T.Orm.Some>> {
