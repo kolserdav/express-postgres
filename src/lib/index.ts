@@ -1,5 +1,5 @@
 /**
  *  Export library files
  */
-export { default as Console } from './Console';
-export { default as Request } from './Request';
+export { default as Console } from './helpers/Console';
+export { default as Request } from './helpers/Request';
